@@ -17,7 +17,7 @@ def main():
     X_train, X_val, X_test, y_train, y_val, y_test = split_data(X, y)
 
     model = build_model(input_shape=X_train.shape[1:], output_shape=y_train.shape[1:])
-    model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=10, batch_size=64)
+    model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=50, batch_size=64)
     
     # Predict and reshape
     y_pred = model.predict(X_test)
