@@ -26,4 +26,6 @@ def test_model_evaluation():
     print(f"🔥 RMSE: {rmse:.4f}\n")
 
     # Add assertion to keep test framework happy
-    assert mae < 1.0  # adjust threshold as needed
+    assert mae < 0.5, f"MAE too high: {mae}"
+    assert rmse < 0.5, f"RMSE too high: {rmse}"
+
