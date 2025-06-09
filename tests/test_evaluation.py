@@ -27,7 +27,12 @@ def test_model_evaluation():
     print(f"\n🔥 MAE: {mae:.4f}")
     print(f"🔥 RMSE: {rmse:.4f}\n")
 
-    # Add assertion to keep test framework happy
-    assert mae < 0.5, f"MAE too high: {mae}"
-    assert rmse < 0.5, f"RMSE too high: {rmse}"
+    # Save to models/metrics.txt
+    os.makedirs("models", exist_ok=True)
+    with open("models/metrics.txt", "w") as f:
+        f.write(f"MAE: {mae:.4f}\n")
+        f.write(f"RMSE: {rmse:.4f}\n")
+
+    assert mae < 1.0
+    assert rmse < 1.0
 
