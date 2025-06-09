@@ -7,9 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build-test-train:
+  build-train-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -25,18 +24,17 @@ jobs:
           pip install pytest
 
       - name: Add current directory to PYTHONPATH
-        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
       - name: Run tests
         run: pytest tests/
 
-      - name: Train the model
+      - name: Train model
         run: python src/train.py
 
-      - name: Upload trained model and metrics
-        uses: actions/upload-artifact@v3
+      - name: Upload model artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: model-and-metrics
+          name: trained-model
           path: |
-            models/model.h5
-            models/metrics.txt
+            models/
