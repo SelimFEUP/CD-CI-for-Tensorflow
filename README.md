@@ -1,6 +1,6 @@
 # Multi-step traffic prediction with TensorFlow CI/CD
 
-This project implements a Deep Learning pipeline using LSTM for multi-step traffic flow prediction task. It includes:
+This repository implements a Deep Learning pipeline using LSTM for multi-step traffic flow prediction task. It includes:
 
 - Data loading & preprocessing
 - LSTM model definition
