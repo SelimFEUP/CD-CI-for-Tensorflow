@@ -22,7 +22,7 @@ def main():
     print(f'Test MAE: {mae:.4f}')
 
     os.makedirs('models', exist_ok=True)
-    model.save('models/traffic_model')
+    model.save('models/model.keras')
 
 if __name__ == '__main__':
     main()
