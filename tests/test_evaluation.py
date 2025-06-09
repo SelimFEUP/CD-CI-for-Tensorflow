@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from src.data_utils import load_data, preprocess_data, create_sequences, split_data
+import os
 
 def test_model_evaluation():
     filepath = "./data/transformed_data.csv"
