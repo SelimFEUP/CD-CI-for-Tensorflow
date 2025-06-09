@@ -3,7 +3,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from src.data_utils import load_data, preprocess_data, create_sequences, split_data
 
 def test_model_evaluation():
-    filepath = "transformed_data.csv"
+    filepath = "./data/transformed_data.csv"
     data = load_data(filepath)
     data_scaled, _ = preprocess_data(data)
 
