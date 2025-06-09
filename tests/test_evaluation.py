@@ -25,8 +25,8 @@ def test_model_evaluation():
     mae = mean_absolute_error(y_test_flat, y_pred_flat)
     rmse = mean_squared_error(y_test_flat, y_pred_flat, squared=False)
 
-    print(f"\n🔥 MAE: {mae:.4f}")
-    print(f"🔥 RMSE: {rmse:.4f}\n")
+    print(f"\n MAE: {mae:.4f}")
+    print(f" RMSE: {rmse:.4f}\n")
 
     # Save to models/metrics.txt
     metrics_path = os.path.join(os.getcwd(), "models", "metrics.txt")
