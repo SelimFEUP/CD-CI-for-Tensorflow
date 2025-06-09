@@ -5,8 +5,8 @@ from src.data_utils import load_data, preprocess_data, create_sequences, split_d
 def test_model_evaluation():
     filepath = "./data/transformed_data.csv"
     data = load_data(filepath)
-    data.fillna(method='ffill', inplace=True)
-    data.interpolate(method='linear', inplace=True)
+    #data.fillna(method='ffill', inplace=True)
+    #data.interpolate(method='linear', inplace=True)
     data_scaled, _ = preprocess_data(data)
 
     input_steps, output_steps = 24, 24
