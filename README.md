@@ -12,6 +12,3 @@ This project implements a deep learning pipeline using LSTM for traffic forecast
 
 ```bash
 python3 src/train.py
-
-## To Run Test
-pytest tests/
